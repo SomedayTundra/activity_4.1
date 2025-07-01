@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-function Subtract(props) {
+function Subtract() {
     const [operands, setOperands] = useState({ first: 0, second: 0 });
 
     function updateFirstNumber(event) {

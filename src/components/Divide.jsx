@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-function Divide(props) {
+function Divide() {
     const [operands, setOperands] = useState({ first: 0, second: 0 });
 
     function updateFirstNumber(event) {
