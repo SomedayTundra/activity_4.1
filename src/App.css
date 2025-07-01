@@ -7,13 +7,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background-color: #f4f7f7;
-  color: #151818;
+  background-color: navajowhite;
+  color: dimgray;
 }
 
-h1 {
-
-}
+h1 { text-align: left; }
 
 p {
   display: flex;
@@ -22,10 +20,25 @@ p {
   font-weight: bold;
 }
 
+select {
+  color: white;
+  background-color: darkgoldenrod;
+  width: 2rem;
+}
+span#operand {
+  color: darkgoldenrod;
+  width: 2rem;
+  text-align: center;
+}
 span#mathtype {
-  color: goldenrod;
+  color: darkgoldenrod;
   width: 7rem;
   text-align: right;
+}
+span#equals {
+  color: green;
+  width: 4rem;
+  text-align: left;
 }
 
 input {
@@ -36,5 +49,9 @@ input {
   background-color: #e5ebeb;
   color: #0a0b0b;
   border-radius: 0.25rem;
-  width: 20rem;
+  width: 7rem;
+}
+
+input.right-aligned {
+  text-align: right;
 }

@@ -4,17 +4,17 @@ function Divide() {
     const [operands, setOperands] = useState({ first: 0, second: 0 });
 
     function updateFirstNumber(event) {
-        setOperands({
+        setOperands((prevOperands) => ({
             first: +event.target.value,
-            second: operands.second
-        });
+            second: prevOperands.second
+        }));
     }
 
     function updateSecondNumber(event) {
-        setOperands({
-            first: operands.first,
+        setOperands((prevOperands) => ({
+            first: prevOperands.first,
             second: +event.target.value
-        })
+        }));
     }
 
     const result = operands.first / operands.second;
@@ -22,8 +22,8 @@ function Divide() {
     return (
         <p>
             <span id="mathtype">DIVIDE</span>
-            <input type="number" onChange={updateFirstNumber} /> /{' '}
-            <input type="number" onChange={updateSecondNumber}/> = {result}
+            <input type="number" class="right-aligned" onChange={updateFirstNumber} /><span id="operand">/</span>
+            <input type="number" onChange={updateSecondNumber}/><span id="equals">= {result}</span>
         </p>
     );
 }
