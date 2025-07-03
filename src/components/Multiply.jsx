@@ -22,7 +22,7 @@ function Multiply() {
     return (
         <p>
             <span id="mathtype">MULTIPLY</span>
-            <input type="number" class="right-aligned" onChange={updateFirstNumber} /><span id="operand">*</span>
+            <input type="number" className="right-aligned" onChange={updateFirstNumber} /><span id="operand">*</span>
             <input type="number" onChange={updateSecondNumber}/><span id="equals">= {result}</span>
         </p>
     );

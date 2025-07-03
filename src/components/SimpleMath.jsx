@@ -30,7 +30,7 @@ function SimpleMath() {
     return (
          <p>
              <span id={"mathtype"}>DYNAMIC</span>
-             <input type="number" class="right-aligned" onChange={updateFirstNumber}/>
+             <input type="number" className="right-aligned" onChange={updateFirstNumber}/>
              <select name="action" id="action" onChange={updateAction}>
                  <option id="add" key={"add"}>+</option>
                  <option id="sub" key={"sub"}>-</option>
