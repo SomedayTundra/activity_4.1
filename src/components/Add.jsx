@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 
 function Add() {
-    const [operands, setOperands] = useState({ first: 0, second: 0 });
+    let defaultOperands = {first: 12, second: 4};
+    const [operands, setOperands] = useState(defaultOperands);
 
     function updateFirstNumber(event) {
         setOperands((prevOperands) => ({
@@ -22,8 +23,8 @@ function Add() {
     return (
         <p>
             <span id="mathtype">ADD</span>
-            <input type="number" className="right-aligned" onChange={updateFirstNumber}/><span id="operand">+</span>{' '}
-            <input type="number" onChange={updateSecondNumber}/><span id="equals">= {result}</span>
+            <input type="number" className="right-aligned" value={defaultOperands.first} onChange={updateFirstNumber}/><span id="operand">+</span>{' '}
+            <input type="number" value={defaultOperands.second} onChange={updateSecondNumber}/><span id="equals">= {result}</span>
         </p>
     );
 }
